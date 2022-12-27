@@ -1,0 +1,23 @@
+@import '../utils/variables';
+
+
+section {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    & img{
+        object-fit: cover;
+        filter: invert(17%);
+        //filter: contrast(60%);
+        border-radius: 20px;
+        width: 100%;
+    }
+    & h1{
+        color: $white-color;
+        position: absolute;
+        top: 35%;
+        left: 26%; 
+        font-size: 48px;
+    }
+}

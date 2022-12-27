@@ -1,0 +1,63 @@
+@import '../utils/variables';
+
+.all-content {
+    width: 1440px;
+    margin: 0 auto;
+    & header{
+
+        nav .first-child {
+            text-decoration: none;
+        }
+
+        nav .second-child {
+            text-decoration: underline;
+        }
+    }
+    & main {
+        text-align: center;
+        margin-top: 50px;
+        & img {
+            border-radius: 20px;
+            object-fit: cover;
+            width: 100%;
+            filter: contrast(75%);
+        }
+        & .boxes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            & section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background-color: $first-color;
+                border-radius: 10px;
+                width: 80%;
+                padding: 5px;
+
+                margin-top: 30px;
+                margin-bottom: 15px;
+
+                padding-left: 20px;
+                padding-right: 20px;
+        
+                    & h1 {
+                        font-size: 24px;
+                        position: initial;
+                    }
+
+                    & img{
+                        width: 2%;
+                        height: 20px;
+                        border-radius: 0;
+                        filter: none;
+                    }
+                }
+        }
+    }
+}
+
+

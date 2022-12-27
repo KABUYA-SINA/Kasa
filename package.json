@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject", 
+    "sass": "sass --watch ./src/sass/main.scss:./styles/css/styles.css", 
+    "prefix": "postcss ./styles/css/styles.css --use autoprefixer -d ./styles/css/prefixed/"
   },
   "eslintConfig": {
     "extends": [
@@ -31,9 +33,12 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.3"
   }
 }

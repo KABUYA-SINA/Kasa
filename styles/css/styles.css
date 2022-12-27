@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Montserrat";
+}
+
+body {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+header img {
+  object-fit: cover;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  color: #FF6060;
+  padding: 15px;
+}
+nav ul li.first-child {
+  text-decoration: underline;
+}
+
+.container {
+  width: 1440px;
+  background: #FFFFFF;
+  margin: 0 auto;
+}
+
+footer {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px;
+}
+footer img {
+  object-fit: cover;
+  width: 6%;
+}
+
+section {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  position: relative;
+}
+section img {
+  object-fit: cover;
+  filter: invert(17%);
+  border-radius: 20px;
+  width: 100%;
+}
+section h1 {
+  color: #FFFFFF;
+  position: absolute;
+  top: 35%;
+  left: 26%;
+  font-size: 48px;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  background-color: #F7F7F7;
+}
+article .articles-boxes {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+  width: 26%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+article .articles-boxes img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+}
+article .articles-boxes h2 {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.content {
+  width: 1440px;
+  background: #FFFFFF;
+  margin: 0 auto;
+}
+.content header .first-child {
+  text-decoration: none;
+}
+.content main {
+  text-align: center;
+  color: #FF6060;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 72px;
+}
+.content main h1 {
+  font-size: 290px;
+  font-weight: 700;
+}
+.content main p {
+  font-size: 36px;
+  padding: 30px;
+}
+.content main a {
+  text-decoration: underline;
+  color: #FF6060;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,15 @@
+@import "./utils/variables";
+@import "./utils/mixins"; 
+
+@import "./base/_base"; 
+
+
+
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/footer";
+
+
+@import "./pages/banner";
+@import "./pages/Card";
+@import "./pages/error";

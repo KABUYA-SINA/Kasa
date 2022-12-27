@@ -1,0 +1,26 @@
+@import '../utils/variables';
+@import '../utils/mixins'; 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+        img {
+                object-fit: cover;
+        }
+}
+
+nav{
+    & ul {
+        display: flex;
+        & li {
+                color: $first-color;
+                padding: 15px;
+                &.first-child{
+                    text-decoration: underline;
+                }
+        }
+    }
+
+}
+

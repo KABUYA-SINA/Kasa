@@ -1,0 +1,28 @@
+@import '../utils/variables';
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    background-color: $second-color;
+    .articles-boxes{
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        border-radius: 10px;
+        width: 26%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        & img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;  //110
+        }
+        & h2{
+            padding: 10px;
+            font-size: 18px;
+        }
+    }
+}

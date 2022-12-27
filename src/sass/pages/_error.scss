@@ -1,0 +1,35 @@
+@import '../utils/variables';
+
+
+.content {
+    width: 1440px;
+    background: $white-color;
+    margin: 0 auto;
+
+
+    & header .first-child {
+        text-decoration: none;
+    }
+    
+    & main{
+        text-align: center;
+        color: $first-color;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 40px;
+        margin-bottom: 72px;
+        & h1{
+            font-size: 290px;
+            font-weight: 700;
+        }
+        & p{
+            font-size: 36px;
+            padding: 30px;
+        }
+        & a{
+            text-decoration: underline;
+            color: $first-color;
+            font-size: 18px;
+        }
+    }
+}
