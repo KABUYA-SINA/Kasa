@@ -26,6 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+  padding: 0 10px;
 }
 header img {
   object-fit: cover;
@@ -37,13 +38,39 @@ nav ul {
 nav ul li {
   color: #FF6060;
   padding: 15px;
+  transition: 0.2s;
+  cursor: pointer;
 }
-nav ul li.first-child {
-  text-decoration: underline;
+
+.nav-active {
+  position: relative;
+}
+.nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background-color: #FF6060;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@-webkit-keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   background: #FFFFFF;
   margin: 0 auto;
 }
@@ -58,11 +85,13 @@ footer {
   background-color: #000000;
   color: #FFFFFF;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 footer img {
   object-fit: cover;
-  width: 6%;
+  width: 5%;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 section {
@@ -91,29 +120,37 @@ article {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 40px;
+  padding-top: 50px;
   border-radius: 25px;
   background-color: #F7F7F7;
 }
-article .articles-boxes {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  border-radius: 10px;
+article a {
+  position: relative;
   width: 26%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: 230px;
 }
-article .articles-boxes img {
+article a .articles-boxes {
+  position: relative;
+  height: 185px;
+  border-radius: 10px;
+}
+article a .articles-boxes img {
   object-fit: cover;
   width: 100%;
   border-radius: 10px;
   height: 180px;
 }
-article .articles-boxes h2 {
+article a .articles-boxes h2 {
   padding: 10px;
   font-size: 18px;
+  position: absolute;
+  top: 119px;
+  color: #FFFFFF;
 }
 
 .content {
-  width: 1440px;
+  max-width: 1440px;
+  height: 100vh;
   background: #FFFFFF;
   margin: 0 auto;
 }
@@ -125,8 +162,8 @@ article .articles-boxes h2 {
   color: #FF6060;
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 40px;
-  margin-bottom: 72px;
+  margin-top: 30px;
+  margin-bottom: 65px;
 }
 .content main h1 {
   font-size: 290px;

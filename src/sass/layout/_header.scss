@@ -1,12 +1,15 @@
 @import '../utils/variables';
 @import '../utils/mixins'; 
+
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
+    padding: 0 10px;
         img {
-                object-fit: cover;
+            object-fit: cover;
         }
 }
 
@@ -14,13 +17,42 @@ nav{
     & ul {
         display: flex;
         & li {
-                color: $first-color;
-                padding: 15px;
-                &.first-child{
-                    text-decoration: underline;
-                }
+            color: $first-color;
+            padding: 15px;
+            transition: .2s;
+            cursor: pointer;
+                // &:hover{
+                //     color: blue;
+                // }
         }
     }
 
 }
+.nav-active{
+    position: relative;
 
+    &::after {
+        content: "";
+        height: 4px;
+        width: 0;
+        background-color: $first-color;
+        position: absolute;
+        border-radius: 10px;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-animation: anim 0.3s ease forwards;
+        animation: anim 0.6s ease forwards;
+
+        @-webkit-keyframes anim{
+            to{
+                width: 100%;
+            }
+        }
+        @keyframes anim {
+            to{
+                width: 100%;
+            }
+        }
+    }
+}

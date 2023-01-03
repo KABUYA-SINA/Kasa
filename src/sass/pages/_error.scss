@@ -2,7 +2,8 @@
 
 
 .content {
-    width: 1440px;
+    max-width: 1440px;
+    height: 100vh;
     background: $white-color;
     margin: 0 auto;
 
@@ -16,8 +17,8 @@
         color: $first-color;
         margin-left: 40px;
         margin-right: 40px;
-        margin-top: 40px;
-        margin-bottom: 72px;
+        margin-top: 30px;
+        margin-bottom: 65px;
         & h1{
             font-size: 290px;
             font-weight: 700;

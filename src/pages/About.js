@@ -2,11 +2,13 @@ import Header from "../components/Header"
 import AboutLogo from '../assets/images/about.png'
 import Vector from '../assets/web-component/Vector.png'
 import '../sass/pages/_about.scss'
-//import { useState } from 'react';
+
+
 import Banner from '../components/Banner'
 import Footer from "../components/Footer"
-
 import Collapse from "../components/Collapse";
+
+
 
 
 
@@ -18,7 +20,10 @@ function About () {
             <Header />
             <main>
                 <Banner bannerLogo={ AboutLogo } title={''} />
-                <Collapse collapseLogo={ Vector } title={''} />
+                <Collapse collapseLogo={ Vector } title={'Fiabilié'}/>
+                <Collapse collapseLogo={ Vector } title={'Respect'}/>
+                <Collapse collapseLogo={ Vector } title={'Service'}/>
+                <Collapse collapseLogo={ Vector } title={'Responsabilité'}/>
 
 
             </main>

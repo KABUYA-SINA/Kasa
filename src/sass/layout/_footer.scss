@@ -5,9 +5,11 @@ footer {
    background-color: $black-color;
    color: $white-color;
    text-align: center;
-   padding: 30px;
+   padding: 20px;
    & img {
     object-fit: cover;
-    width: 6%;
+    width: 5%;
+    padding-top: 20px;
+    padding-bottom: 10px;
    }
 }

@@ -1,7 +1,7 @@
 @import '../utils/variables';
 
 .container{
-    width: 1440px;
+    max-width: 1440px;
     background: $white-color; 
     margin: 0 auto;
 }

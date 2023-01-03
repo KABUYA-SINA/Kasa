@@ -1,13 +1,12 @@
-import { data } from '../data/dataBase'
+import data  from '../data/dataBase.json'
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Banner from '../components/Banner'
 import Card from '../components/Card'
+import BannerLogo from '../assets/images/Banner.png'
 import '../sass/layout/_container.scss'
 import '../sass/base/_base.scss'
-
-import BannerLogo from '../assets/images/Banner.png'
 
 
 

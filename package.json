@@ -9,15 +9,16 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.5.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject", 
-    "sass": "sass --watch ./src/sass/main.scss:./styles/css/styles.css", 
+    "eject": "react-scripts eject",
+    "sass": "sass --watch ./src/sass/main.scss:./styles/css/styles.css",
     "prefix": "postcss ./styles/css/styles.css --use autoprefixer -d ./styles/css/prefixed/"
   },
   "eslintConfig": {
