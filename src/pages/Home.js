@@ -1,31 +1,49 @@
-import data  from '../data/dataBase.json'
+import data  from '../data/dataBase.json';
+import React from 'react'
 
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import Banner from '../components/Banner'
-import Card from '../components/Card'
-import BannerLogo from '../assets/images/Banner.png'
-import '../sass/layout/_container.scss'
-import '../sass/base/_base.scss'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Banner from '../components/Banner';
+import BannerLogo from '../assets/images/Banner.png';
+
+import '../sass/layout/_container.scss';
+import '../sass/base/_base.scss';
+
+import MainLoading from '../components/MainLoading';
+import  { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import  ErrorBoundaryData  from './ErrorBoundaryData';
 
 
+
+const Card = React.lazy(() => {
+    return new Promise(resolve => setTimeout(resolve, 7 * 250))
+    .then(() => import('../components/Card')  )
+})
 
 
 function Home () {
-    return ( <div className="container">
-        <Header />
-        <main>
-            <Banner bannerLogo={ BannerLogo } title={ 'Chez vous, partout et ailleurs' } />
+    return (
+        <div >
+            <div className='container'>
+                <Header />
+                <main>
+                    <Banner bannerLogo={ BannerLogo } title={ 'Chez vous, partout et ailleurs' } />
+                    <ErrorBoundary FallbackComponent={ErrorBoundaryData} onReset={() => {}}>
+                        <Suspense fallback={<MainLoading />}>
+                            <article>
+                            {data.map(({id, cover, title}) => (
+                                <Card  key={id} id={id} cover={cover} alt={'picture of ' + title} title={title} />
+                                ))}
+                            </article>
+                        </Suspense>
+                    </ErrorBoundary>
 
-            <article>
-                {data.map(({id, cover, title}) => (
-                    <Card  key={id} id={id} cover={cover} title={title} />
-                ))}
-            </article>
-
-        </main>
-        <Footer />
-    </div>)
+                </main>
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
 export default Home

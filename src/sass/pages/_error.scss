@@ -1,36 +1,53 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 
 .content {
-    max-width: 1440px;
-    height: 100vh;
     background: $white-color;
     margin: 0 auto;
+        @include tablet {
+                max-width: 992px;
+            }
+
+        @include ordi {
+            max-width: 1440px;
+        }
 
 
     & header .first-child {
         text-decoration: none;
     }
-    
+
     & main{
+        height: 76.1vh;
         text-align: center;
         color: $first-color;
-        margin-left: 40px;
-        margin-right: 40px;
         margin-top: 30px;
-        margin-bottom: 65px;
+        margin-bottom: 60px;
+
         & h1{
-            font-size: 290px;
+            font-size: 140px;
             font-weight: 700;
+            @include tablet{
+                font-size: 290px;
+            }
         }
         & p{
-            font-size: 36px;
+            font-size: 19px;
             padding: 30px;
+            @include tablet{
+                font-size: 36px;
+            }
         }
         & a{
             text-decoration: underline;
             color: $first-color;
-            font-size: 18px;
+            font-size: 16px;
+
+            @include tablet{
+                font-size: 18px;
+            }
         }
     }
+
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +7,9 @@
     box-sizing: border-box;
     vertical-align: baseline;
     background: transparent;
-    font-family: 'Montserrat';
+    font-family: 'Quicksand', sans-serif;
 }
 
-// header,
-// article,
-// section,
-// footer {
-//     display: block;
-// }
 
 body {
     line-height: 1.5;
@@ -22,7 +17,6 @@ body {
 
 a {
     text-decoration: none;
-    // color: black;
 }
 
 ul {

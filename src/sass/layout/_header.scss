@@ -7,23 +7,57 @@ header{
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
-    padding: 0 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    & a:nth-child(1){
+        width: 25%;
+        @include tablet {
+                width: 15%;
+            }
+    }
         img {
             object-fit: cover;
+            width: 45%;
+            @include tablet{
+                width: 40%;
+            }
+            @include ordi{
+                width: 25%;
+            }
+        }
+        @include tablet {
+            margin-top: 30px;
+        }
+        @include ordi{
+            margin-left: 100px;
+            margin-right: 100px;
         }
 }
 
 nav{
+    width: 70%;
+    text-align: center;
+    @include tablet{
+        width: 75%;
+    }
+
+    @include ordi{
+        width: 50%;
+    }
     & ul {
         display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
         & li {
             color: $first-color;
-            padding: 15px;
+            padding: 5px;
             transition: .2s;
             cursor: pointer;
-                // &:hover{
-                //     color: blue;
-                // }
+            @include tablet{
+                padding: 15px;
+            }
         }
     }
 

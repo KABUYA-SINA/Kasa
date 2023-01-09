@@ -1,8 +1,9 @@
 @import "./utils/variables";
-@import "./utils/mixins"; 
+@import "./utils/mixins";
 
-@import "./base/_base"; 
-
+@import "./base/_base";
+@import "./base/footer_typography";
+@import "./base/header_typography";
 
 
 @import "./layout/header";
@@ -13,3 +14,7 @@
 @import "./pages/banner";
 @import "./pages/Card";
 @import "./pages/error";
+@import "./pages/about";
+@import "./pages/collapse";
+@import "./pages/singlepage";
+@import "./pages/loading";
