@@ -58,6 +58,20 @@
                         top: 40%;  //30
                     }
                 }
+                & .cover__images--length{
+                    position: relative;
+                    top: 87%;
+                    left: 43%;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $white-color;
+                    @include tablet{
+                        left: 50%;
+                    }
+                    @include ordi{
+                        left: 48%;
+                    }
+                }
             }
             & .apartment-cover__image{
                 width: 100%;
@@ -77,7 +91,6 @@
                 @include tablet{
                     flex-direction: row;
                 }
-
                 &-details {
                     width: 100%;
                     text-align: left;
@@ -126,7 +139,6 @@
                         flex-direction: column;
                         align-items: flex-end;
                     }
-
                     &--identity{
                         display: flex;
                         align-items: center;

@@ -7,14 +7,6 @@ import '../sass/pages/_collapse.scss';
 
 
 
-
-const IconButtonWrapper = styled.img`
-  transform: rotate(180deg);
-  overflow: hidden;
-  transition: all 0.3s ease-out;
-  ${({ rotate }) => rotate && `transform: rotate(0deg)`};
-`
-
 export default function Collapse( { title, text} ) {
 
   const [rotate, setRotate] = useState(false)
@@ -22,20 +14,25 @@ export default function Collapse( { title, text} ) {
 
   const handleClick = () => {
                   setRotate((prevState) => (!prevState ))
-                  setAppear((prevState) => (!prevState ))};
+                  setAppear((prevState) => (!prevState ))
+  };
 
   return (
         <div className="boxes collapse-flex__childs boxes-collapse__modifications">
             <section>
-                <h3>{title}</h3>
-                <IconButtonWrapper rotate={+rotate} onClick={handleClick} src={ Vector } alt='arrow' />
+                <h2>{title}</h2>
+                <IconImageWrapper rotate={+rotate} onClick={handleClick} src={ Vector } alt={'arrow of' + title} />
             </section>
-            {textAppear && <span className="boxes-childs">{text}</span>} 
+            {textAppear && <span className="boxes-childs">{text}</span>}
 
         </div>
-  ) 
+  )
 }
-//Fiabilié
-//Respect
-//Service
-//Responsabilité
+
+
+  const IconImageWrapper = styled.img`
+  transform: rotate(180deg);
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  ${({ rotate }) => rotate && `transform: rotate(0deg)`};
+  `

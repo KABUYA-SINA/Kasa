@@ -1,21 +1,13 @@
-//import logo from './logo.svg'
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-//import Home from './pages/Home'
-//import About from './pages/About'
-import Error from './pages/Error'
-//import SinglePage from './pages/SinglePage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import  { Suspense } from 'react';
 
-import React from 'react'
+import Error from './pages/Error';
+import React from 'react';
+import Loading from './components/Loading';
 
+import './App.css';
 
 
-
-
-
-import Loading from './components/Loading'
-
-import  { Suspense } from 'react'
 
 
 const Home = React.lazy(() => {
@@ -28,14 +20,9 @@ const About = React.lazy(() => {
 })
 const SinglePage = React.lazy(() => {
     return new Promise(resolve => setTimeout(resolve, 5 * 250))
-    .then(() => import('./pages/SinglePage')  )
+    .then(() => import('./pages/SinglePage'))
 })
 
-// const Home = lazy(() => import('./pages/Home'))
-// const About = lazy (() => import('./pages/About'))
-// const SinglePage = lazy(() => import(('./pages/SinglePage')))
-
-//  <Suspense fallback={<Loading />}></Suspense>
 
 
 function App() {

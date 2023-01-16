@@ -1,11 +1,10 @@
 import Header from "../components/Header";
 import AboutLogo from '../assets/images/about.png';
 import Vector from '../assets/web-component/Vector.png';
-import '../sass/pages/_about.scss';
 import Banner from '../components/Banner';
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
-
+import '../sass/pages/_about.scss';
 
 
 

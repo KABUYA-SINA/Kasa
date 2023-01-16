@@ -26,7 +26,6 @@ main {
                 flex-wrap: wrap;
                 flex-direction: row;
             }
-
             & a {
                 position: relative;
                 width: 100%;
@@ -46,6 +45,10 @@ main {
                 @include ordi {
                     width: 30%;
                 }
+                .articles--modifications{
+                    height: 179px;
+                    @include images-colors;
+                }
 
                 .articles-boxes {
                     position: relative;
@@ -57,11 +60,15 @@ main {
                         width: 100%;
                         border-radius: 10px;
                         height: 180px; //110
+                        opacity: .8;
+                        @include ordi{
+                            opacity: .85;
+                        }
                     }
-
                     & h2 {
                         padding: 10px;
                         font-size: 15px;
+                        letter-spacing: .1rem;
                         position: absolute;
                         top: 115px;
                         color: $white-color;

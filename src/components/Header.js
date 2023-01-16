@@ -15,10 +15,10 @@ function Header () {
             <nav>
                 <ul>
                     <NavLink href='../pages/Home.js' to="/" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
-                        <li className='first-child' >Accueil</li>
+                        <li className='first-child'>Accueil</li>
                     </NavLink>
                     <NavLink href='../pages/About.js' to="/about" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
-                        <li className='second-child' >A Propos</li>
+                        <li className='second-child'>A Propos</li>
                     </NavLink>
                 </ul>
             </nav>

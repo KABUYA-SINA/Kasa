@@ -6,8 +6,7 @@
     margin: 0 auto;
         @include tablet {
                 max-width: 992px;
-            }
-        
+        }
         @include ordi {
             max-width: 1440px;
         }
@@ -16,7 +15,7 @@
         text-align: center;
         margin-top: 50px;
         margin-bottom: 35vh;
-    
+
         & div span{
             font-size: 14px;
         }

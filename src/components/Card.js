@@ -9,9 +9,11 @@ function Card ( {id, cover, title, alt } ){
 
     return (
         <Link to={`/SinglePage/${id}`}>
-            <div key={id} className='articles-boxes'>
-                <img src={cover} alt={alt} />
-                <h2>{title}</h2>
+            <div className='articles--modifications'>
+                <div key={id} className='articles-boxes'>
+                    <img src={cover} alt={alt} />
+                    <h2>{title}</h2>
+                </div>
             </div>
         </Link>
 
@@ -23,4 +25,4 @@ function Card ( {id, cover, title, alt } ){
 
 
 
-export default Card 
+export default Card
