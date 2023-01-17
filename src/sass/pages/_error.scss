@@ -14,11 +14,14 @@
         }
 
     & main{
-        height: 76.1vh;
+        height: 74vh;  // 76.1 //67.5
         text-align: center;
         color: $first-color;
         margin-top: 30px;
         margin-bottom: 60px;
+        @include tablet{
+            height: 79.5vh;
+        }
 
         & h1{
             font-size: 140px;

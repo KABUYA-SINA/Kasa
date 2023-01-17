@@ -9,8 +9,8 @@ import '../sass/pages/_collapse.scss';
 
 export default function Collapse( { title, text} ) {
 
-  const [rotate, setRotate] = useState(false)
-  const [textAppear, setAppear ] = useState(true)
+  const [rotate, setRotate] = useState(true)
+  const [textAppear, setAppear ] = useState(false)
 
   const handleClick = () => {
                   setRotate((prevState) => (!prevState ))
