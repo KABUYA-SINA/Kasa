@@ -8,9 +8,6 @@ import Loading from './components/Loading';
 import './App.css';
 
 
-import ErrorBoundaryData from './pages/ErrorBoundaryData';
-import { ErrorBoundary } from 'react-error-boundary';
-
 
 
 const Home = React.lazy(() => {
@@ -31,7 +28,6 @@ const SinglePage = React.lazy(() => {
 function App() {
   return (
       <BrowserRouter >
-        <ErrorBoundary FallbackComponent={ErrorBoundaryData} onReset={() => {}}>
             <Suspense fallback={<Loading />}>
                 <Routes>
                     <Route path='/' element={ <Home /> } />
@@ -40,7 +36,6 @@ function App() {
                     <Route path='*' element={ <Error /> } />
                 </Routes>
             </Suspense>
-        </ErrorBoundary>
       </BrowserRouter>
   )
 }

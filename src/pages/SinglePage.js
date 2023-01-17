@@ -10,12 +10,14 @@ import '../sass/pages/_singlepage.scss';
 
 import Rating from "../components/Rating";
 import Slider from "../components/Slider";
+import Error from './Error'
 
 
 
 export default function SinglePage(){
     const { id } = useParams()
     const apartment = datas.find(element => { return element.id === id })
+    if (!apartment) return <Error />;
 
     return(
 
