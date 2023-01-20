@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../components/Header";
 import AboutLogo from '../assets/images/about.png';
 import Vector from '../assets/web-component/Vector.png';
@@ -11,7 +12,7 @@ import '../sass/pages/_about.scss';
 function About () {
 
     return (
-        <div>
+        <React.Fragment>
             <div className="all-content">
                 <Header />
                 <main>
@@ -23,7 +24,7 @@ function About () {
                 </main>
             </div>
             <Footer />
-        </div>
+        </React.Fragment>
     )
 }
 

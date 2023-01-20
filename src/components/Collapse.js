@@ -21,7 +21,7 @@ export default function Collapse( { title, text} ) {
         <div className="boxes collapse-flex__childs boxes-collapse__modifications">
             <section>
                 <h2>{title}</h2>
-                <IconImageWrapper rotate={+rotate} onClick={handleClick} src={ Vector } alt={'arrow of' + title} />
+                <IconImageWrapper rotate={+rotate} onClick={handleClick} src={ Vector } alt={'arrow of ' + title} />
             </section>
             {textAppear && <span className="boxes-childs">{text}</span>}
 

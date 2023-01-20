@@ -9,14 +9,15 @@
     margin: 0 auto;
     overflow: hidden;
     @include tablet {
-            max-width: 992px;
+        max-width: 992px;
     }
 
     @include ordi {
         max-width: 1440px;
     }
         & main{
-                margin-bottom: 29vh; //10
+            margin-bottom: 29vh; //10
+            margin-top: 20px;
             @include tablet{
                 margin-bottom: 43vh; //34 //39
             }
@@ -88,6 +89,7 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: column;
+                margin-top: 20px;
                 @include tablet{
                     flex-direction: row;
                 }
