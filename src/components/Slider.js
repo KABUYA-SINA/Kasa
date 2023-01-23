@@ -1,10 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useCallback } from 'react';
+import { useState, useRef, useEffect, } from 'react';
 
 import VectorLeft from '../assets/web-component/Vector-left.png';
 import VectorRight from '../assets/web-component/Vector-right.png';
 
+
+
 const Slider = ({pictures}) => {
+    const timerRef = useRef(null)
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const slideStyles = {
@@ -25,11 +28,22 @@ const Slider = ({pictures}) => {
         const newIndex = isFirstSlide ? pictures.length - 1 : currentIndex - 1
         setCurrentIndex(newIndex)
     }
-    const goToNext = () =>{
+    const goToNext = useCallback(() =>{
         const isLastSlide = currentIndex === pictures.length - 1
         const newIndex = isLastSlide ? 0 : currentIndex  + 1
         setCurrentIndex(newIndex)
-    }
+    }, [currentIndex, pictures])
+
+    //slide animation 
+    useEffect(() =>{
+        if (timerRef.current) {
+            clearTimeout(timerRef.current)
+        }
+        timerRef.current = setTimeout(() => {
+        goToNext()
+        }, 2500)
+        return () => clearTimeout(timerRef.current)
+    }, [goToNext])
 
 
     return (
@@ -44,7 +58,7 @@ const Slider = ({pictures}) => {
                 <div className='apartment-cover__image' style={slideStyles}>
                 </div>
             </div>   }
-    </div>
+        </div>
     );
 };
 
