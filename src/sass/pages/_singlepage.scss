@@ -7,24 +7,21 @@
 .single-page__content {
     background: $white-color;
     margin: 0 auto;
-    overflow: hidden;
     @include tablet {
         max-width: 992px;
+        width: 100%;
     }
 
     @include ordi {
         max-width: 1440px;
     }
         & main{
-            margin-bottom: 29vh; //10
+            margin-bottom: 0; //10 //29vh
             margin-top: 20px;
-            @include tablet{
-                margin-bottom: 43vh; //34 //39
-            }
             @include ordi{
                 margin-left: 100px;
                 margin-right: 100px;
-                margin-bottom: 45vh; //35
+                //margin-bottom: 45vh; //35
             }
             & .apartment-images{
                 display: flex;
