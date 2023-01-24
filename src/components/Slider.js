@@ -3,6 +3,7 @@ import { useState, useRef, useEffect, } from 'react';
 
 import VectorLeft from '../assets/web-component/Vector-left.png';
 import VectorRight from '../assets/web-component/Vector-right.png';
+import '../sass/pages/_singlepage.scss'
 
 
 
@@ -17,11 +18,11 @@ const Slider = ({pictures}) => {
         backgroundImage: `url(${pictures[currentIndex]})`,
     }
 
-    const sliderStyles ={
-        height: "100%",
-        position: 'relative',
-        width: '100%',
-    }
+    // const sliderStyles ={
+    //     height: "100%",
+    //     position: 'relative',
+    //     width: '100%',
+    // }
 
     const goToPrevious = () =>{
         const isFirstSlide = currentIndex === 0
@@ -48,13 +49,13 @@ const Slider = ({pictures}) => {
 
     return (
         <div className="apartment-images">
-            { pictures.length > 1 ? <div  style={sliderStyles}>
+            { pictures.length > 1 ? <div  className='sliderStyles'>
                 <img  className='apartment-images__modifications left'   src={ VectorLeft} alt='left arrow' onClick={goToPrevious}/>
                 <div className='apartment-cover__image' style={slideStyles}>
                     <span className='cover__images--length'>{currentIndex + 1 }/{pictures.length}</span>
                 </div>
                 <img className='apartment-images__modifications right' src={ VectorRight} alt='right arrow' onClick={goToNext}/>
-            </div> : <div  style={sliderStyles}>
+            </div> : <div  className='sliderStyles'>
                 <div className='apartment-cover__image' style={slideStyles}>
                 </div>
             </div>   }

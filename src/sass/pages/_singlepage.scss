@@ -16,12 +16,10 @@
         max-width: 1440px;
     }
         & main{
-            margin-bottom: 0; //10 //29vh
-            margin-top: 20px;
+            margin-bottom: 0;
             @include ordi{
                 margin-left: 100px;
                 margin-right: 100px;
-                //margin-bottom: 45vh; //35
             }
             .main-loading{
                 height: 154px;
@@ -33,6 +31,12 @@
                 display: flex;
                 align-items: center;
 
+                & .sliderStyles{
+                    height: 100%;
+                    position: relative;
+                    width: 100%;
+                }
+
                 & .apartment-images__modifications{
                     height: 60px;
                     padding: 10px;
@@ -42,25 +46,16 @@
                     }
                 }
                 & .left {
-                    top: 30%;
+                    top: 50%;
                     left: 0%;
-                    @include tablet{
-                        top: 38%;
-                    }
-                    @include ordi {
-                        left: 0%;
-                        top: 40%;
-                    }
+                    transform: translate(50%, -50%);
+                    cursor: pointer;
                 }
                 & .right{
-                    top: 30%;
+                    top: 50%;
                     right: 0%;
-                    @include tablet {
-                        top: 38%;
-                    }
-                    @include ordi {
-                        top: 40%;  //30
-                    }
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
                 }
                 & .cover__images--length{
                     position: relative;
@@ -79,7 +74,7 @@
             }
             & .apartment-cover__image{
                 width: 100%;
-                height: 240px;   //240
+                height: 240px;
                 @include tablet{
                     height: 350px;
                 }
