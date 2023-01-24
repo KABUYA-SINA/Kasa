@@ -11,7 +11,7 @@ import './App.css';
 
 
 const Home = React.lazy(() => {
-    return new Promise(resolve => setTimeout(resolve, 5 * 250))
+    return new Promise(resolve => setTimeout(resolve, 4 * 250))
     .then(() => import('./pages/Home')  )
 })
 const About = React.lazy(() => {
