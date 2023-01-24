@@ -18,7 +18,7 @@ import  ErrorBoundaryData  from './ErrorBoundaryData';
 
 
 const Card = React.lazy(() => {
-    return new Promise(resolve => setTimeout(resolve, 3 * 250))
+    return new Promise(resolve => setTimeout(resolve, 3 * 550))
     .then(() => import('../components/Card')  )
 })
 

@@ -49,6 +49,7 @@ main {
                 .articles--modifications{
                     height: 179px;
                     @include images-colors;
+                    animation: fade-in-top .75s 250ms ease-in-out both;
                 }
 
                 .articles-boxes {
@@ -84,4 +85,15 @@ main {
             }
         }
 
+}
+@keyframes fade-in-top {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
