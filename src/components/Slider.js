@@ -11,10 +11,10 @@ const Slider = ({pictures}) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const slideStyles = {
-    borderRadius: '10px',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundImage: `url(${pictures[currentIndex]})`,
+        borderRadius: '10px',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundImage: `url(${pictures[currentIndex]})`,
     }
 
     const sliderStyles ={

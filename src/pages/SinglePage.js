@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Suspense } from 'react'
 import datas from '../data/dataBase.json';
 import React from "react";
 
@@ -7,10 +8,17 @@ import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 
 import '../sass/pages/_singlepage.scss';
-
 import Rating from "../components/Rating";
-import Slider from "../components/Slider";
 import Error from './Error'
+import MainLoading from '../components/MainLoading';
+
+
+
+
+const Slider = React.lazy(() => {
+    return new Promise(resolve => setTimeout(resolve, 4 * 250))
+    .then(() => import('../components/Slider')  )
+})
 
 
 
@@ -25,7 +33,10 @@ export default function SinglePage(){
             <div className='single-page__content'>
                 <Header />
                 <main>
-                    <Slider pictures={apartment.pictures}/>
+                    <Suspense fallback={<MainLoading />}>
+                        <Slider pictures={apartment.pictures}/>
+                    </Suspense>
+
                     <div className="apartment">
                         <div className="apartment-details">
                             <h1>{apartment.title}</h1>

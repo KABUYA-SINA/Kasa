@@ -23,6 +23,12 @@
                 margin-right: 100px;
                 //margin-bottom: 45vh; //35
             }
+            .main-loading{
+                height: 154px;
+                @include tablet{
+                    height: 290px;
+                }
+            }
             & .apartment-images{
                 display: flex;
                 align-items: center;
