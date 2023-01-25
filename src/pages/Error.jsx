@@ -17,7 +17,7 @@ function Error() {
    }
 
   return (
-    <div>
+    <div className='parent'>
         <div className='content'>
             <Header />
             <main>
