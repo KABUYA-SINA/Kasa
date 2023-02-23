@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useState, useRef, useEffect, } from 'react';
+import { useState } from 'react';
 
 import VectorLeft from '../assets/web-component/Vector-left.png';
 import VectorRight from '../assets/web-component/Vector-right.png';
@@ -8,7 +8,6 @@ import '../sass/pages/_singlepage.scss'
 
 
 const Slider = ({pictures}) => {
-    const timerRef = useRef(null)
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const slideStyles = {
@@ -17,12 +16,6 @@ const Slider = ({pictures}) => {
         backgroundSize: 'cover',
         backgroundImage: `url(${pictures[currentIndex]})`,
     }
-
-    // const sliderStyles ={
-    //     height: "100%",
-    //     position: 'relative',
-    //     width: '100%',
-    // }
 
     const goToPrevious = () =>{
         const isFirstSlide = currentIndex === 0
@@ -34,18 +27,6 @@ const Slider = ({pictures}) => {
         const newIndex = isLastSlide ? 0 : currentIndex  + 1
         setCurrentIndex(newIndex)
     }, [currentIndex, pictures])
-
-    //slide animation 
-    useEffect(() =>{
-        if (timerRef.current) {
-            clearTimeout(timerRef.current)
-        }
-        timerRef.current = setTimeout(() => {
-        goToNext()
-        }, 2500)
-        return () => clearTimeout(timerRef.current)
-    }, [goToNext])
-
 
     return (
         <div className="apartment-images">
