@@ -6,8 +6,8 @@ function Footer () {
 
     return (
         <footer>
-               <img  src={Logo} alt='icon kasa footer' />
-               <h1>©2022 Kasa. All rights reserved</h1>
+            <img  src={Logo} alt='icon kasa footer' />
+            <h1>©2022 Kasa. All rights reserved</h1>
         </footer>)
 }
 

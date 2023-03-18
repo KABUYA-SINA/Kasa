@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import { useState } from 'react';
-
 import VectorLeft from '../assets/web-component/Vector-left.png';
 import VectorRight from '../assets/web-component/Vector-right.png';
 import '../sass/pages/_singlepage.scss'
